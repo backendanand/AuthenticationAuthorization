@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adhar Card</title>
+    <style>
+        @font-face {
+            font-family: 'DevanagariBold';
+            src: url('Static/Fonts/dev.ttf') format('truetype');
+        }
+
+        .adhar__card__body {
+            font-family: 'DevanagariBold', sans-serif;
+            margin: 0;
+            width: 700px;
+        }
+
+        .main__container {
+            font-family: sans-serif;
+            width: 700px;
+            position: relative;
+        }
+
+            .main__container .img {
+                width: 100%;
+            }
+
+            .main__container .main__wrapper {
+                position: absolute;
+                bottom: 160px;
+                height: 180px;
+                width: 100%;
+            }
+
+                .main__container .main__wrapper .photo {
+                    width: 130px;
+                    height: 150px;
+                    object-fit: cover;
+                    position: absolute;
+                    top: 0;
+                    left: 30px;
+                }
+
+                .main__container .main__wrapper .user__details {
+                    margin-left: 20px;
+                    margin-right: 150px;
+                    position: absolute;
+                    top: 0;
+                    left: 150px;
+                }
+
+                .main__container .main__wrapper .qrcode {
+                    width: 150px;
+                    height: 150px;
+                    object-fit: cover;
+                    position: absolute;
+                    top: 0;
+                    right: 30px;
+                }
+
+            .main__container h1 {
+                position: absolute;
+                bottom: 90px;
+                left: 0;
+                text-align: center;
+                width: 100%;
+            }
+    </style>
+</head>
+
+<body class="adhar__card__body">
+    <div class="main__container">
+        <img class="img" src="{{BackgroundImage}}" alt="">
+        <div class="main__wrapper">
+            <img class="photo" src="{{Photo}}" alt="">
+            <div class="user__details">
+                <p class="name__hindi">{{NameInHindi}}</p>
+                <p class="name__english">{{Name}}</p>
+                <p class="dob">जन्म तिथि / DOB : {{DateOfBirth}}</p>
+                <p class="gender">{{GenderInHindi}} / {{Gender}}</p>
+            </div>
+            <img class="qrcode" src="{{QrCode}}" alt="">
+        </div>
+        <h1>{{CardNumber}}</h1>
+    </div>
+</body>
+
+</html>
